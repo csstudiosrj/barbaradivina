@@ -369,4 +369,42 @@
             
             <!-- Aviso Obrigatório CFM -->
             <div class="text-center mb-6 max-w-4xl mx-auto">
-                <p class="text-[10px] text-softGray leading-relaxed font-l
+                <p class="text-[10px] text-softGray leading-relaxed font-light">
+                    As informações contidas neste site têm caráter estritamente educativo e informativo, não substituindo, em hipótese alguma, a consulta médica presencial. Em caso de dúvidas ou sintomas, procure um médico. Site desenvolvido em conformidade com o Manual de Publicidade Médica (Resolução CFM nº 1.974/11).
+                </p>
+            </div>
+
+            <div class="text-center text-[9px] uppercase tracking-[0.2em] text-softGray font-bold">
+                <p>
+                    Desenvolvido por 
+                    <a href="https://www.csstudios.site" target="_blank" class="text-sageGreen hover:text-espresso transition hover:underline">CS studios</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 50,
+        });
+
+        // Navbar Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if(window.scrollY > 50) {
+                nav.classList.add('shadow-sm');
+                nav.classList.remove('py-4');
+                nav.classList.add('py-3');
+            } else {
+                nav.classList.remove('shadow-sm');
+                nav.classList.remove('py-3');
+                nav.classList.add('py-4');
+            }
+        });
+    </script>
+</body>
+</html>
