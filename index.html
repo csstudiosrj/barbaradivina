@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Bárbara Divina | Clínica Médica Integrativa e Funcional</title>
+    
+    <!-- Open Graph / SEO -->
+    <meta property="og:title" content="Dra. Bárbara Divina | Clínica Médica Integrativa e Funcional">
+    <meta property="og:description" content="Investigação clínica aprofundada para quem busca entender a verdadeira causa dos sintomas. Atendimento humanizado na Barra da Tijuca.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://barbaradivina.csstudios.site/"> 
+    <meta property="og:image" content="https://barbaradivina.csstudios.site/capa.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans:['Lato', 'sans-serif'],
+                        serif: ['Lora', 'serif'],
+                    },
+                    colors: {
+                        warmSand: '#F9F6F0', /* Bege muito claro / Fundo principal */
+                        espresso: '#2D2A26', /* Marrom super escuro / Texto principal */
+                        sageGreen: '#6B8E7B', /* Verde Sálvia / Destaques e Botões */
+                        sageHover: '#5A7A68',
+                        blush: '#D8A48F', /* Terracota suave / Detalhes sutis */
+                        softGray: '#8A8681'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; background-color: #F9F6F0; }
+        
+        /* Glassmorphism Quente e Natural */
+        .glass-nav {
+            background: rgba(249, 246, 240, 0.9);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(107, 142, 123, 0.15);
+        }
+
+        .wellness-card {
+            background: #FFFFFF;
+            border: 1px solid rgba(107, 142, 123, 0.1);
+            border-radius: 1rem;
+            transition: all 0.5s ease;
+        }
+        .wellness-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(107, 142, 123, 0.08);
+            border-color: rgba(107, 142, 123, 0.3);
+        }
+
+        /* Fundo Hero: Estética Clean, Botânica e de Bem-estar */
+        .hero-bg {
+            background: linear-gradient(to right, rgba(249, 246, 240, 0.95) 40%, rgba(249, 246, 240, 0.4) 100%), 
+                        url('https://images.unsplash.com/photo-1498837167922-41c543bd8c54?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #F9F6F0; }
+        ::-webkit-scrollbar-thumb { background: #6B8E7B; border-radius: 4px; }
+    </style>
+</head>
+<body class="bg-warmSand text-espresso font-sans overflow-x-hidden selection:bg-sageGreen selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-nav py-4 transition-all duration-300">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 border border-sageGreen text-sageGreen flex items-center justify-center rounded-full group-hover:bg-sageGreen group-hover:text-white transition-colors">
+                    <span class="font-serif font-semibold text-lg">BD</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-serif font-semibold text-xl text-espresso tracking-wide leading-none">Dra. Bárbara Divina</span>
+                    <span class="text-[9px] font-bold uppercase tracking-[0.2em] text-softGray mt-1">Clínica Médica Integrativa</span>
+                </div>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 text-[11px] font-bold uppercase tracking-[0.15em] text-softGray">
+                <a href="#filosofia" class="hover:text-sageGreen transition-colors">A Médica</a>
+                <a href="#sintomas" class="hover:text-sageGreen transition-colors">Abordagem</a>
+                <a href="#depoimentos" class="hover:text-sageGreen transition-colors">Relatos</a>
+                <a href="#contato" class="hover:text-sageGreen transition-colors">Agendamento</a>
+            </div>
+
+            <a href="https://wa.me/5521997788671" target="_blank" class="bg-sageGreen text-white px-6 py-2.5 text-[10px] font-bold tracking-widest hover:bg-sageHover transition-all flex items-center gap-2 uppercase rounded-full shadow-lg shadow-sageGreen/20">
+                <i class="fab fa-whatsapp text-sm"></i> Marcar Consulta
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-20 hero-bg z-10">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-2xl" data-aos="fade-right" data-aos-duration="1200">
+                
+                <div class="inline-flex items-center gap-2 bg-white px-5 py-2 rounded-full mb-8 shadow-sm border border-sageGreen/20">
+                    <div class="flex text-blush text-xs">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <span class="text-espresso font-bold text-[10px] uppercase tracking-widest ml-2">5.0 (130+ Avaliações)</span>
+                </div>
+
+                <h1 class="text-5xl md:text-6xl font-serif text-espresso leading-[1.15] mb-6">
+                    A saúde na sua totalidade. Um olhar <span class="text-sageGreen italic">além dos sintomas.</span>
+                </h1>
+                
+                <p class="text-base md:text-lg text-softGray mb-10 font-light leading-relaxed">
+                    Investigação clínica aprofundada para quem busca entender a verdadeira causa do cansaço, dificuldade de emagrecimento e alterações hormonais.
+                </p>
+                
+                <div class="flex flex-wrap gap-4 items-center">
+                    <a href="https://wa.me/5521997788671" target="_blank" class="bg-sageGreen text-white px-8 py-4 font-bold hover:bg-sageHover transition-all rounded-full shadow-lg shadow-sageGreen/20 uppercase tracking-widest text-[11px]">
+                        Agendar Avaliação
+                    </a>
+                    <div class="flex flex-col border-l border-sageGreen/20 pl-6">
+                        <span class="text-espresso font-serif text-lg italic">Barra da Tijuca</span>
+                        <span class="text-[10px] uppercase tracking-widest text-softGray">Rio de Janeiro</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filosofia / Sobre a Médica -->
+    <section id="filosofia" class="py-24 bg-white border-y border-sageGreen/10">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="relative" data-aos="fade-right">
+                    <!-- Imagem representativa de cuidado/medicina -->
+                    <div class="aspect-[4/5] rounded-t-full overflow-hidden shadow-2xl relative z-10 border-4 border-white">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover" alt="Medicina Integrativa">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-blush/20 rounded-full blur-2xl z-0"></div>
+                    <div class="absolute -top-6 -left-6 w-32 h-32 bg-sageGreen/20 rounded-full blur-xl z-0"></div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <span class="text-sageGreen font-bold text-[10px] uppercase tracking-[0.3em] mb-4 block">Experiência & Cuidado</span>
+                    <h2 class="text-4xl md:text-5xl font-serif text-espresso mb-8 leading-tight">Mais de 10 anos unindo <span class="italic text-sageGreen">ciência e empatia.</span></h2>
+                    
+                    <div class="space-y-6 text-softGray font-light leading-relaxed">
+                        <p>
+                            Com uma sólida trajetória que inclui a atuação em cenários de emergência, desenvolvi uma visão ampla e segura sobre o cuidado com a vida humana. Essa bagagem me permite atuar com precisão técnica sem jamais perder a sensibilidade.
+                        </p>
+                        <p>
+                            Meu atendimento é voltado para a <strong>investigação clínica aprofundada</strong>, focando na prevenção e na organização da saúde ao longo do tempo. Acredito que cada paciente é único e merece um tempo dedicado para escuta e análise detalhada.
+                        </p>
+                        <p>
+                            Juntos, construímos um plano de cuidado claro, personalizado e, acima de tudo, sustentável para a sua rotina.
+                        </p>
+                    </div>
+
+                    <div class="mt-10 flex items-center gap-6">
+                        <div class="w-16 h-[1px] bg-blush"></div>
+                        <span class="font-serif text-xl text-espresso italic">Dra. Bárbara Divina</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Abordagem / Quando procurar -->
+    <section id="sintomas" class="py-32 bg-warmSand">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-blush mb-4 block">Sinais do seu corpo</span>
+                <h2 class="text-4xl md:text-5xl font-serif text-espresso tracking-tight">Quando buscar a <span class="italic text-sageGreen">Medicina Integrativa?</span></h2>
+                <p class="text-softGray mt-6 max-w-2xl mx-auto font-light">Indicado para pacientes que buscam entender a causa raiz de quadros que ainda não foram bem esclarecidos pela medicina convencional.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                
+                <div class="wellness-card p-8 text-center group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-sageGreen/10 rounded-full flex items-center justify-center mx-auto mb-6 text-sageGreen text-2xl group-hover:scale-110 transition-transform">
+                        <i class="fas fa-battery-quarter"></i>
+                    </div>
+                    <h3 class="text-lg font-serif font-semibold text-espresso mb-3">Cansaço Persistente</h3>
+                    <p class="text-softGray text-sm font-light leading-relaxed">Falta de energia crônica, fadiga ao acordar e indisposição que não melhora com o repouso.</p>
+                </div>
+
+                <div class="wellness-card p-8 text-center group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-sageGreen/10 rounded-full flex items-center justify-center mx-auto mb-6 text-sageGreen text-2xl group-hover:scale-110 transition-transform">
+                        <i class="fas fa-weight-scale"></i>
+                    </div>
+                    <h3 class="text-lg font-serif font-semibold text-espresso mb-3">Dificuldade de Emagrecer</h3>
+                    <p class="text-softGray text-sm font-light leading-relaxed">Investigação metabólica para entender as barreiras que impedem a perda de peso sustentável.</p>
+                </div>
+
+                <div class="wellness-card p-8 text-center group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-sageGreen/10 rounded-full flex items-center justify-center mx-auto mb-6 text-sageGreen text-2xl group-hover:scale-110 transition-transform">
+                        <i class="fas fa-droplet"></i>
+                    </div>
+                    <h3 class="text-lg font-serif font-semibold text-espresso mb-3">Alterações Hormonais</h3>
+                    <p class="text-softGray text-sm font-light leading-relaxed">Desequilíbrios que afetam o humor, sono, libido, pele e a qualidade de vida como um todo.</p>
+                </div>
+
+                <div class="wellness-card p-8 text-center group" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 bg-sageGreen/10 rounded-full flex items-center justify-center mx-auto mb-6 text-sageGreen text-2xl group-hover:scale-110 transition-transform">
+                        <i class="fas fa-heart-pulse"></i>
+                    </div>
+                    <h3 class="text-lg font-serif font-semibold text-espresso mb-3">Prevenção e Longevidade</h3>
+                    <p class="text-softGray text-sm font-light leading-relaxed">Organização da saúde ao longo do tempo, focando em envelhecer com vitalidade e autonomia.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Prova Social (Avaliações do Google) -->
+    <section id="depoimentos" class="py-24 bg-white border-y border-sageGreen/10">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-3 gap-12 items-center">
+                <div class="lg:col-span-1" data-aos="fade-right">
+                    <h2 class="text-3xl md:text-4xl font-serif text-espresso mb-6 leading-tight">O impacto do <span class="text-sageGreen italic">cuidado real.</span></h2>
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="text-5xl font-serif font-bold text-espresso">5,0</span>
+                        <div class="flex flex-col">
+                            <div class="flex text-blush text-sm mb-1">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-[10px] text-softGray uppercase tracking-widest font-bold">130 Avaliações no Google</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-softGray font-light mt-6">A maior recompensa da nossa prática clínica é ver a transformação na qualidade de vida dos nossos pacientes.</p>
+                </div>
+
+                <div class="lg:col-span-2 grid md:grid-cols-2 gap-6">
+                    <div class="wellness-card p-8 bg-warmSand border-none" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex text-blush text-xs mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="italic text-espresso mb-6 text-sm leading-relaxed font-light">"Dra. Bárbara é incrível!!! Médica super atenciosa, prestativa, humana e acolhedora ❤️"</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-sageGreen/20 text-sageGreen flex items-center justify-center text-sm font-bold font-serif">F</div>
+                            <span class="font-bold text-[10px] uppercase tracking-widest text-softGray">Fátima Marini</span>
+                        </div>
+                    </div>
+                    <div class="wellness-card p-8 bg-warmSand border-none" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex text-blush text-xs mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="italic text-espresso mb-6 text-sm leading-relaxed font-light">"Ótimo atendimento. Médica excelente e super atenciosa. Super indico!"</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-sageGreen/20 text-sageGreen flex items-center justify-center text-sm font-bold font-serif">C</div>
+                            <span class="font-bold text-[10px] uppercase tracking-widest text-softGray">Caroliis Braga</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato & Mapa -->
+    <section id="contato" class="py-32 bg-warmSand relative">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                
+                <!-- Info & Mapa -->
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl md:text-5xl font-serif text-espresso mb-6">Inicie sua jornada de <span class="text-sageGreen italic">saúde.</span></h2>
+                    <p class="text-softGray mb-12 font-light">Nosso consultório na Barra da Tijuca foi pensado para oferecer o máximo de conforto e tranquilidade durante o seu atendimento.</p>
+                    
+                    <div class="space-y-6 mb-12">
+                        <div class="flex items-start gap-5 bg-white p-6 rounded-2xl shadow-sm border border-sageGreen/10">
+                            <div class="w-12 h-12 bg-sageGreen/10 flex items-center justify-center text-sageGreen text-xl rounded-full shrink-0"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h4 class="text-espresso font-bold text-sm mb-1">Clínica Barra da Tijuca</h4>
+                                <p class="text-softGray text-sm font-light">Av. Olegário Maciel, 460 - Sala 202<br>Barra da Tijuca, Rio de Janeiro - RJ, 22621-200</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-5 bg-white p-6 rounded-2xl shadow-sm border border-sageGreen/10">
+                            <div class="w-12 h-12 bg-sageGreen/10 flex items-center justify-center text-sageGreen text-xl rounded-full shrink-0"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <h4 class="text-espresso font-bold text-sm mb-1">Horário de Atendimento</h4>
+                                <p class="text-softGray text-sm font-light">Segunda a Sexta, a partir das 09:00.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-5 bg-white p-6 rounded-2xl shadow-sm border border-sageGreen/10">
+                            <div class="w-12 h-12 bg-sageGreen/10 flex items-center justify-center text-sageGreen text-xl rounded-full shrink-0"><i class="fas fa-phone-alt"></i></div>
+                            <div>
+                                <h4 class="text-espresso font-bold text-sm mb-1">Telefone / WhatsApp</h4>
+                                <p class="text-softGray text-sm font-light">(21) 99778-8671</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="h-64 w-full rounded-2xl overflow-hidden shadow-sm border border-sageGreen/20">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.8465134!2d-43.308!3d-23.012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zRMOpY2ltbyB0ZXJjZWlybyBwYXJhbGVsbyBzdWw!5e0!3m2!1spt-BR!2sbr!4v1710000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" class="filter grayscale hover:grayscale-0 transition duration-700"></iframe>
+                    </div>
+                </div>
+
+                <!-- Formulário Web3Forms -->
+                <div data-aos="fade-left">
+                    <div class="bg-white p-10 md:p-12 rounded-[2rem] shadow-xl border border-sageGreen/10 relative">
+                        <h3 class="text-2xl font-serif font-bold text-espresso mb-2">Pré-Agendamento</h3>
+                        <p class="text-softGray text-sm font-light mb-8">Envie seus dados e nossa equipe entrará em contato para agendar o melhor horário para sua consulta.</p>
+                        
+                        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
+                            <!-- Chave CS Studios -->
+                            <input type="hidden" name="access_key" value="866dc7f0-7f5a-48ed-8c07-0f76c71689a9">
+                            <input type="hidden" name="subject" value="Pré-Agendamento - Site Dra. Bárbara Divina">
+                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                            <div>
+                                <label class="text-[10px] uppercase tracking-widest font-bold text-softGray block mb-2">Nome Completo</label>
+                                <input type="text" name="name" required class="w-full bg-warmSand border border-sageGreen/20 px-5 py-4 text-espresso focus:border-sageGreen outline-none transition-colors rounded-xl text-sm">
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="text-[10px] uppercase tracking-widest font-bold text-softGray block mb-2">E-mail</label>
+                                    <input type="email" name="email" required class="w-full bg-warmSand border border-sageGreen/20 px-5 py-4 text-espresso focus:border-sageGreen outline-none transition-colors rounded-xl text-sm">
+                                </div>
+                                <div>
+                                    <label class="text-[10px] uppercase tracking-widest font-bold text-softGray block mb-2">WhatsApp</label>
+                                    <input type="text" name="phone" required class="w-full bg-warmSand border border-sageGreen/20 px-5 py-4 text-espresso focus:border-sageGreen outline-none transition-colors rounded-xl text-sm">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="text-[10px] uppercase tracking-widest font-bold text-softGray block mb-2">Principal Queixa ou Objetivo</label>
+                                <textarea name="message" rows="3" class="w-full bg-warmSand border border-sageGreen/20 px-5 py-4 text-espresso focus:border-sageGreen outline-none transition-colors resize-none rounded-xl text-sm" placeholder="Ex: Cansaço persistente, emagrecimento..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-sageGreen text-white font-bold py-4 hover:bg-sageHover transition-all rounded-xl mt-2 shadow-lg shadow-sageGreen/20 uppercase tracking-widest text-[11px]">
+                                Solicitar Horário
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Compliance CFM) -->
+    <footer class="py-12 border-t border-sageGreen/20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-8 pb-8 border-b border-sageGreen/10">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 border border-sageGreen text-sageGreen flex items-center justify-center rounded-full">
+                        <span class="font-serif font-semibold">BD</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif font-bold text-lg text-espresso leading-none">Dra. Bárbara Divina</span>
+                        <span class="text-[8px] font-bold uppercase tracking-widest text-softGray mt-1">CRM-RJ | RQE</span>
+                    </div>
+                </div>
+                <div class="flex gap-6 text-softGray">
+                    <a href="https://www.instagram.com/dra.barbaradivina" target="_blank" class="hover:text-sageGreen transition"><i class="fab fa-instagram text-xl"></i></a>
+                    <a href="https://wa.me/5521997788671" target="_blank" class="hover:text-sageGreen transition"><i class="fab fa-whatsapp text-xl"></i></a>
+                </div>
+            </div>
+            
+            <!-- Aviso Obrigatório CFM -->
+            <div class="text-center mb-6 max-w-4xl mx-auto">
+                <p class="text-[10px] text-softGray leading-relaxed font-l
